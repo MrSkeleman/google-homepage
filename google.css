@@ -1,14 +1,39 @@
 /* Google Homepage CSS */
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+html {
+    height:100%;
+}
 body {
+    display:flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
+    height: 100%;
+    margin: 0 0 0 0;
 }
-#searchbar {
+#search {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#heading, footer{
+    display: flex;
+    padding: 15px;
+}
+#heading div:first-child, footer div:first-child {
+    flex-grow: 1;
+}
+.searchbar {
     width: 580px;
-    margin: 150px auto 0;
-    text-align: center
-
 }
+.button-container {
+    display: flex;
+    justify-content: center;
 }
 nav#Headings ul li button.sign-in {
     background:#4285f4;
@@ -24,20 +49,21 @@ nav#Headings ul li button.sign-in {
 }
 li {
     display: inline;
-  }
- input[type="Search"] {
+}
+input[type="Search"] {
     width: 100%;
     height: 40px;
     padding: 3px 4px;
     margin: 25px 0 30px;
+    background-color: #fff;
     border: 1px solid #FFF;
-    box-shadow: 0px 0px 0px 1p #c8caca;
+    box-shadow: 1px 1px 1px 1px #ccc;
     border-radius: 40px;
 }   
- input[type="Search"]:hover{
+input[type="Search"]:hover{
     border-color: #c8caca transparent;
- }
- input[type="submit"] {
+}
+input[type="submit"] {
     background: rgb(240, 241, 241);
     color: #777;
     border: solid 1px #aaa;
@@ -45,7 +71,7 @@ li {
     padding: 5x;
     font-size: 14px;
     font-weight: normal;
-    margin: 0 5px;
+    margin: 0 6px;
     width: 150px;
     height: 33px;
 }
@@ -56,14 +82,6 @@ nav#Headings ul li {
     display: inline;
 }
 footer {
-    text-align: left center;
     background: #eee;
-    position: fixed;
-    bottom: 3px;
-    height: auto;
     width: 100%;
-}
-
-footer nav{
-    padding: 20px;
 }
